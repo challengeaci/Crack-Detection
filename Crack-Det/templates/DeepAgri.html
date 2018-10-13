@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DeepAgri</title>
+        <style>
+            body{
+                background-color: #15008e;
+                padding:0;
+                margin:0;
+            }
+           .title{
+				width:100%;
+				height:auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+				background-color: white;
+				text-align:center;
+				padding-top:10px;
+				margin:0;
+			}
+            .image{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top:100px;
+                left:calc(50% - 100px);
+                box-shadow: 5px 5px 5px black;
+            }
+            img{
+                width:200px;
+                height:200px;
+            }
+            .problem,.solution{
+                height: 40px;
+                width:200px;
+                position: absolute;
+                top:200px;
+                left:calc(50% - 100px);
+                background-color: #8295ff;
+                font-size: 20px;
+                font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+                border-radius: 5px 0px 5px 0px;
+                margin-top: 20px;
+            }
+            .solution{
+                font-size: 15px;
+                margin: 10px;
+                color:white;
+            }
+            .intro{
+                width:100%;
+                heigh:300px;
+                background-color: #8295ff;
+                display: inline-block;
+            }
+            button{
+                width:100px;
+                height: 40px;
+                border: none;
+                background-color: #141577;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: rgba(0,0,255,.5);
+            }
+            .icon{
+                width:90px;
+                height:75px;
+                border-radius: 50%;
+                background-image: url(http://127.0.0.1:8000/media/images/icon.jpg);
+                position: absolute;
+                top:5px;
+                left:500px;
+                background-position: center;
+                background-size: 150px;
+            }
+            h1,h3{
+				padding-bottom:5px;
+				margin:0;
+				color: #8e004b;
+			}
+        </style>
+    </head>
+
+    <body>
+        <div class="title">
+			<h1>Crack Det</h1>
+            <h3>Crack Detection</h3>
+        <div class="icon"></div>
+		</div>
+        <div class="image">
+            <img src={{ pic.url }}
+        </div>
+            <div class="problem">
+                <h3>{{ predict }}</h3>
+            </div>
+        </div>
+    </body>
+
+</html>
